@@ -29,13 +29,6 @@ const Header = () => {
             >
               Man
             </NavLink>
-            <NavLink
-              activeClassName={styles.nav_item_active}
-              className={styles.nav_item}
-              to="/woman"
-            >
-              Woman
-            </NavLink>
           </Nav>
           <Nav>
             {cookie.token ? (

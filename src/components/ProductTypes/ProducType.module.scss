@@ -8,4 +8,14 @@
       background: #343b3f;
     }
   }
+  & a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px !important;
+    display: block;
+    &:hover {
+      color: #dee2e6;
+    }
+  }
 }

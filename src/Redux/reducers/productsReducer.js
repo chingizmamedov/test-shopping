@@ -11,7 +11,6 @@ const initialState = {
     'TRİKOTAJ',
     'ŞORT VƏ ÇİMƏRLİK GEYİMLƏRİ',
     'KİŞİ AYAQQABILARI',
-    'KİŞİ AKSESSUARLARI',
   ],
   categories: {
     'KİŞİ ÜST GEYİMİ': {

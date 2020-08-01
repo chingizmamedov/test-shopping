@@ -10,23 +10,21 @@ const PaginationWrap = ({ productcount, handleSetpage, page }) => {
     return null;
   }
   return (
-    <div className="row">
-      <div className="col-12 d-flex justify-content-end p-3">
-        <ReactPaginate
-          forcePage={page}
-          previousLabel="<"
-          nextLabel=">"
-          breakLabel="..."
-          breakClassName="break-me"
-          pageCount={productcount / 20}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
-          onPageChange={handlePageClick}
-          containerClassName="pagination"
-          subContainerClassName="pages pagination"
-          activeClassName="active"
-        />
-      </div>
+    <div className="d-flex justify-content-end p-4">
+      <ReactPaginate
+        forcePage={page}
+        previousLabel="<"
+        nextLabel=">"
+        breakLabel="..."
+        breakClassName="break-me"
+        pageCount={productcount / 20}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName="pagination"
+        subContainerClassName="pages pagination"
+        activeClassName="active"
+      />
     </div>
   );
 };

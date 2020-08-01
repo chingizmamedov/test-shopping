@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MainLink.module.scss';
 
-const MainLink = ({ img, name }) => {
+const MainLink = ({ img, name, to, col }) => {
   return (
-    <div className={`col-4 ${styles.link_wrap}`}>
+    <div className={`${col} ${styles.link_wrap}`}>
       <Link
         style={{
           transform: 'scale(1.2)',
           overflow: 'hidden',
+          width: '100%',
         }}
         className="d-flex align-items-center justify-content-end"
-        to="/man"
+        to={`/man${to}`}
       >
         <img
           style={{
@@ -20,8 +21,8 @@ const MainLink = ({ img, name }) => {
           src={img}
           alt=""
         />
-        <div className={styles.link_name}>{name}</div>
       </Link>
+      <div className={styles.link_name}>{name}</div>
     </div>
   );
 };
