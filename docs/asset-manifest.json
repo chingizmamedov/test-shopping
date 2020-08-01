@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6d9443b.chunk.css",
-    "main.js": "/static/js/main.734f0d56.chunk.js",
-    "main.js.map": "/static/js/main.734f0d56.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ec569187.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ec569187.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.00306806.chunk.js": "/static/js/2.00306806.chunk.js",
-    "static/js/2.00306806.chunk.js.map": "/static/js/2.00306806.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f6da0b995fd3c2596503fae43e478994.js": "/precache-manifest.f6da0b995fd3c2596503fae43e478994.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.b6d9443b.chunk.css.map": "/static/css/main.b6d9443b.chunk.css.map",
-    "static/js/2.00306806.chunk.js.LICENSE.txt": "/static/js/2.00306806.chunk.js.LICENSE.txt",
-    "static/media/kostyum.jpg": "/static/media/kostyum.81b6e769.jpg",
-    "static/media/Login.module.scss": "/static/media/login-shop.ae5dc19f.png",
-    "static/media/rubashka.jpg": "/static/media/rubashka.3eef3c7d.jpg",
-    "static/media/shoes.webp": "/static/media/shoes.ab3b3146.webp",
-    "static/media/ust-geyimi.jpg": "/static/media/ust-geyimi.d36a8271.jpg"
+    "main.css": "./test-shopping/static/css/main.ee55369c.chunk.css",
+    "main.js": "./test-shopping/static/js/main.50f0d737.chunk.js",
+    "main.js.map": "./test-shopping/static/js/main.50f0d737.chunk.js.map",
+    "runtime-main.js": "./test-shopping/static/js/runtime-main.16a60e9f.js",
+    "runtime-main.js.map": "./test-shopping/static/js/runtime-main.16a60e9f.js.map",
+    "static/css/2.af3c1da9.chunk.css": "./test-shopping/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.fa188809.chunk.js": "./test-shopping/static/js/2.fa188809.chunk.js",
+    "static/js/2.fa188809.chunk.js.map": "./test-shopping/static/js/2.fa188809.chunk.js.map",
+    "index.html": "./test-shopping/index.html",
+    "precache-manifest.0c67dceb1500aee6423a63fdb8465ec8.js": "./test-shopping/precache-manifest.0c67dceb1500aee6423a63fdb8465ec8.js",
+    "service-worker.js": "./test-shopping/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "./test-shopping/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.ee55369c.chunk.css.map": "./test-shopping/static/css/main.ee55369c.chunk.css.map",
+    "static/js/2.fa188809.chunk.js.LICENSE.txt": "./test-shopping/static/js/2.fa188809.chunk.js.LICENSE.txt",
+    "static/media/kostyum.jpg": "./test-shopping/static/media/kostyum.81b6e769.jpg",
+    "static/media/Login.module.scss": "./test-shopping/static/media/login-shop.ae5dc19f.png",
+    "static/media/rubashka.jpg": "./test-shopping/static/media/rubashka.3eef3c7d.jpg",
+    "static/media/shoes.webp": "./test-shopping/static/media/shoes.ab3b3146.webp",
+    "static/media/ust-geyimi.jpg": "./test-shopping/static/media/ust-geyimi.d36a8271.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec569187.js",
+    "static/js/runtime-main.16a60e9f.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.00306806.chunk.js",
-    "static/css/main.b6d9443b.chunk.css",
-    "static/js/main.734f0d56.chunk.js"
+    "static/js/2.fa188809.chunk.js",
+    "static/css/main.ee55369c.chunk.css",
+    "static/js/main.50f0d737.chunk.js"
   ]
 }
