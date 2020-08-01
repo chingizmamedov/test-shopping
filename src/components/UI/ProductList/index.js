@@ -25,33 +25,28 @@ const ProductList = ({ products, page, setFilteredItemLength, minPrice, maxPrice
     setFilteredItemLength(filteredProducts.length);
   }, [cat, page, minPrice, maxPrice]);
   return (
-    <>
-      {slicedItems.length > 0 ? (
-        <TransitionGroup
-          className="todo-list row mt-3 ml-1 mr-1 w-100"
-          style={{
-            paddingLeft: '280px',
-          }}
-        >
-          {slicedItems.map(({ src, name, amount }, index) => (
-            <CSSTransition
-              key={name + amount + index}
-              timeout={500}
-              classNames="col-12 col-sm-6 col-md-4 col-lg-3 item"
-            >
-              <div>
-                <ProductCard src={src} name={name} amount={amount} index={index} />
-              </div>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+    <TransitionGroup
+      className="todo-list row mt-3 ml-1 mr-1 w-100"
+      style={{
+        paddingLeft: '280px',
+      }}
+    >
+      {slicedItems.length ? (
+        slicedItems.map(({ src, name, amount, stok }, index) => (
+          <CSSTransition
+            key={name + amount + index}
+            timeout={500}
+            classNames="col-12 col-sm-6 col-md-4 col-lg-3 item"
+          >
+            <div>
+              <ProductCard src={src} name={name} amount={amount} stok={stok} index={index} />
+            </div>
+          </CSSTransition>
+        ))
       ) : (
-        <Jumbotron className="w-75">
-          <h1>Nothing found for display!</h1>
-          <p>Please, change search params.</p>
-        </Jumbotron>
+        <p>Pox</p>
       )}
-    </>
+    </TransitionGroup>
   );
 };
 

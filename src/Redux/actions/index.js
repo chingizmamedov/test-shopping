@@ -1,3 +1,4 @@
 import selectCat from './products';
+import { addProductToBusket, getFromStock } from './busket';
 
-export default selectCat;
+export { selectCat, addProductToBusket, getFromStock };

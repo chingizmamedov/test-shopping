@@ -3,7 +3,7 @@ import { Nav } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link, useRouteMatch } from 'react-router-dom';
 import styles from './ProducType.module.scss';
-import selectCat from '../../Redux/actions';
+import { selectCat } from '../../Redux/actions';
 
 const ProductTypes = ({ categoriesList }) => {
   const { url } = useRouteMatch();

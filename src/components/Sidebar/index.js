@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Sidebar.module.scss';
 import MinMaxFilter from '../UI/MinMaxFilter';
+import SidebarBusket from '../SidebarBusket';
 
 const Sidebar = ({ position, maxPrice, minPrice, setMinPrice, setMaxPrice }) => {
   return (
@@ -17,6 +18,9 @@ const Sidebar = ({ position, maxPrice, minPrice, setMinPrice, setMaxPrice }) => 
           setMinPrice={setMinPrice}
           setMaxPrice={setMaxPrice}
         />
+      </div>
+      <div className="d-flex flex-column">
+        <SidebarBusket />
       </div>
     </div>
   );

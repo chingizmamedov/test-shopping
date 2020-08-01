@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import Logout from '../../images/logout.png';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -10,7 +11,6 @@ const Header = () => {
   const handleSignOut = () => {
     removeCookie('token');
   };
-
   return (
     <div className="header">
       <Navbar className="p-0 pl-3 pr-3" collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -33,7 +33,7 @@ const Header = () => {
           <Nav>
             {cookie.token ? (
               <span className={styles.nav_item} onClick={handleSignOut}>
-                Logout
+                <img src={Logout} alt="logout" />
               </span>
             ) : (
               <NavLink to="/login">Login</NavLink>

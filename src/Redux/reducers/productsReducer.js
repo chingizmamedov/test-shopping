@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import products from '../../utils/constants';
 
 const initialState = {
-  allProducts: products,
+  allProducts: products.map((item) => ({ ...item, stok: 4 })),
   categoriesList: [
     'KİŞİ ÜST GEYİMİ',
     'KOSTYUMLAR VƏ PENCƏKLƏR',
@@ -59,6 +60,18 @@ export default function (state = initialState, action) {
       return {
         ...state,
         selectedCat: action.selectedCat,
+      };
+    }
+    case 'GET_FROM_STOK': {
+      const oldAllProductsList = [...state.allProducts];
+      const index = _.findIndex(state.allProducts, { src: action.product.src });
+      if (oldAllProductsList[index].stok > 0) {
+        oldAllProductsList[index].stok = oldAllProductsList[index].stok - 1;
+      }
+
+      return {
+        ...state,
+        allProducts: oldAllProductsList,
       };
     }
 
