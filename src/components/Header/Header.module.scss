@@ -1,0 +1,20 @@
+.header {
+
+}
+
+.logo {
+  font-size: 28px;
+  color: #fff;
+  font-width: bold;
+  margin-right: 20px;
+}
+
+.nav_item {
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  &_active {
+    background: #524f4f;
+  }
+}
