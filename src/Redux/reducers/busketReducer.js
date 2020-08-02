@@ -12,7 +12,21 @@ export default function (state = initialState, action) {
       if (index === -1) {
         oldAllProductsList.push({ ...action.product, count: 1 });
       } else {
-        oldAllProductsList[index].count = oldAllProductsList[index].count + 1;
+        oldAllProductsList[index].count += 1;
+      }
+      return {
+        ...state,
+        buyProducts: oldAllProductsList,
+      };
+    }
+    case 'DELETE_PRODUCT_FROM_BUSKET': {
+      const oldAllProductsList = [...state.buyProducts];
+      const index = _.findIndex(state.buyProducts, { src: action.product.src });
+      const stokCount = oldAllProductsList[index].count;
+      if (stokCount > 1) {
+        oldAllProductsList[index].count -= 1;
+      } else {
+        oldAllProductsList.splice(index, 1);
       }
       return {
         ...state,

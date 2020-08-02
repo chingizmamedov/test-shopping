@@ -8,7 +8,6 @@ import Polo from '../../../images/polo.png';
 import Trikotaj from '../../../images/trikotaj.jpg';
 import Plyaj from '../../../images/plyaj.jpeg';
 import Obuv from '../../../images/obuv.jpg';
-import Akksesuar from '../../../images/aksesuar.jpg';
 import MainLink from '../../UI/MainLink';
 
 const MainPage = () => {

@@ -1,21 +1,24 @@
 .type {
-  background: #524f4f;
-  color: #fff;
+  flex-direction: column;
   & div {
-    font-size: 14px;
+    font-size: 12px;
     padding: 4px;
     &:hover {
-      background: #343b3f;
+      background: #17a2b8;
     }
   }
   & a {
-    color: #fff;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     padding: 5px !important;
     display: block;
+    color: #343b3f;
     &:hover {
       color: #dee2e6;
     }
+  }
+  & .active {
+    background: #00a8c3;
+    color: #fff;
   }
 }

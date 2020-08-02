@@ -1,0 +1,26 @@
+.busket {
+  &_wrap {
+    height: 60vh;
+    overflow: auto;
+    min-height: 738px;
+    width: 90%;
+    max-width: 470px;
+  }
+  &_item {
+    border: 1px solid #343b3f;
+
+    margin-bottom: 20px;
+    &_body {
+      padding: 15px;
+    }
+  }
+  &_img {
+    width: 40%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.all_info {
+  font-size: 28px;
+}

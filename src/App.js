@@ -7,6 +7,7 @@ import MainPage from './components/Pages/Main';
 import Products from './components/Pages/Products';
 import Login from './components/Pages/Login';
 import 'react-notifications-component/dist/theme.css';
+import BusketPage from './components/Pages/Busket';
 
 const baseName = process.env.REACT_APP_ENV === 'production' ? '/test-shopping/' : '/';
 
@@ -26,8 +27,17 @@ function App() {
               <Products />
             </Layout>
           </Route>
+          <Route path="/busket">
+            <Layout>
+              <BusketPage />
+            </Layout>
+          </Route>
+
           <Route path="/login">
             <Login />
+          </Route>
+          <Route>
+            <p>404</p>
           </Route>
         </Switch>
       </Router>

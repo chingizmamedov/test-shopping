@@ -1,4 +1,4 @@
 import selectCat from './products';
-import { addProductToBusket, getFromStock } from './busket';
+import { addProductToBusket, getFromStock, deleteProductFromBusket, receiveToStok } from './busket';
 
-export { selectCat, addProductToBusket, getFromStock };
+export { selectCat, addProductToBusket, getFromStock, deleteProductFromBusket, receiveToStok };

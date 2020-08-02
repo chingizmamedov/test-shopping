@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { NavLink, Link, useRouteMatch } from 'react-router-dom';
 import styles from './ProducType.module.scss';
 import { selectCat } from '../../Redux/actions';
 
@@ -14,7 +14,9 @@ const ProductTypes = ({ categoriesList }) => {
       </div>
       {categoriesList.map((item) => (
         <div key={item}>
-          <Link to={`${url}/${item}`}>{item}</Link>
+          <NavLink activeClassName={styles.active} to={`${url}/${item}`}>
+            {item}
+          </NavLink>
         </div>
       ))}
     </Nav>

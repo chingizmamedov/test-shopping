@@ -1,43 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "497aff0e48c392049d36ff02a421f43e",
+    "revision": "0c22442d3786a090a79bdfa0f32fa523",
     "url": "./index.html"
   },
   {
-    "revision": "b681ea015b0e1cd35adc",
+    "revision": "8b0509e12dcf6a004ad9",
     "url": "./static/css/2.0f17492b.chunk.css"
   },
   {
-    "revision": "facaf652b6d77d496e74",
-    "url": "./static/css/main.26bbe303.chunk.css"
+    "revision": "efd7d72e0fbb3fde6aae",
+    "url": "./static/css/main.29157045.chunk.css"
   },
   {
-    "revision": "b681ea015b0e1cd35adc",
-    "url": "./static/js/2.2d506aea.chunk.js"
+    "revision": "8b0509e12dcf6a004ad9",
+    "url": "./static/js/2.ddf1dcb4.chunk.js"
   },
   {
     "revision": "d34765099f873f021310c640e7c76c5b",
-    "url": "./static/js/2.2d506aea.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.ddf1dcb4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "facaf652b6d77d496e74",
-    "url": "./static/js/main.85c52e7f.chunk.js"
+    "revision": "efd7d72e0fbb3fde6aae",
+    "url": "./static/js/main.1ec65c96.chunk.js"
   },
   {
     "revision": "0362ce03cc770b524447",
     "url": "./static/js/runtime-main.04110b5a.js"
   },
   {
-    "revision": "fb08f28f9fe8a884018c10a4a4b3cf22",
-    "url": "./static/media/aksesuar.fb08f28f.jpg"
-  },
-  {
     "revision": "81b6e769e24a81792c4e67496ea77006",
     "url": "./static/media/kostyum.81b6e769.jpg"
   },
   {
+    "revision": "3935e87b296f496e90167cfa65b7c70e",
+    "url": "./static/media/local_grocery_store_24px_rounded.3935e87b.svg"
+  },
+  {
     "revision": "ae5dc19f083e8667a24b6590726d1ad9",
     "url": "./static/media/login-shop.ae5dc19f.png"
+  },
+  {
+    "revision": "542cc187e9230b1636da7bc21f668738",
+    "url": "./static/media/logout.542cc187.svg"
   },
   {
     "revision": "d5a59ea6b32a898c85456b7195eb72b0",

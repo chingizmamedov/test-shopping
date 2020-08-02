@@ -44,6 +44,7 @@ a, a:hover {
 
 .todo-list {
   min-height: 79vh;
+  padding-top: 56px;
 }
 
 .item-enter {
@@ -63,4 +64,31 @@ a, a:hover {
 
 .footer {
   color: #fff;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+  flex-shrink: 0;
+  width: 70% !important;
+  margin: auto;
+}
+
+
+
+.my-node-enter {
+  opacity: 0;
+  transform: translateX(400px);
+}
+.my-node-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.my-node-exit-active {
+  opacity: 0;
+  transform: translateX(400px);
+  transition: 200ms;
 }

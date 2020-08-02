@@ -74,7 +74,15 @@ export default function (state = initialState, action) {
         allProducts: oldAllProductsList,
       };
     }
-
+    case 'RECEIVE_TO_STOK': {
+      const oldAllProductsList = [...state.allProducts];
+      const index = _.findIndex(state.allProducts, { src: action.product.src });
+      oldAllProductsList[index].stok += 1;
+      return {
+        ...state,
+        allProducts: oldAllProductsList,
+      };
+    }
     default:
       return {
         ...state,
