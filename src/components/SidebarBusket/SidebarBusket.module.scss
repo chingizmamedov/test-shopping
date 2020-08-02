@@ -18,7 +18,7 @@
   height: 100vh;
   background: #fff;
   color: #444;
-  box-shadow: -10px 0 10px #e8e8e8;
+  box-shadow: 0 0 50px 10px rgba(0,0,0,.1);
 }
 .counter {
   font-size: 26px;
@@ -29,6 +29,7 @@
   align-items: center;
   & div {
     color: #00a8c3;
+    cursor: pointer;
     &:hover {
       color: #343b3f;
     }

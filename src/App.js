@@ -8,6 +8,7 @@ import Products from './components/Pages/Products';
 import Login from './components/Pages/Login';
 import 'react-notifications-component/dist/theme.css';
 import BusketPage from './components/Pages/Busket';
+import Notfound from './components/Pages/NotFound';
 
 const baseName = process.env.REACT_APP_ENV === 'production' ? '/test-shopping/' : '/';
 
@@ -37,7 +38,7 @@ function App() {
             <Login />
           </Route>
           <Route>
-            <p>404</p>
+            <Notfound />
           </Route>
         </Switch>
       </Router>

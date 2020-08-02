@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import PaginationWrap from '../../UI/Pagination';
 import ProductList from '../../UI/ProductList';
 import Sidebar from '../../Sidebar';
@@ -24,17 +25,19 @@ const Products = ({ products }) => {
 
   return (
     <div className="d-flex flex-column">
-      {/*<ProductTypes handleSetpage={handleSetPage} />*/}
       <div className="d-flex position-relative">
         <Sidebar
           minPrice={minPrice}
           maxPrice={maxPrice}
           setMinPrice={handleSetMinPrice}
           setMaxPrice={handleSetMaxPrive}
+          handleSetPage={handleSetPage}
         />
         <div className="d-flex flex-column w-100">
           <Switch>
-            <Route exact path={path}></Route>
+            <Route exact path={path}>
+              <Redirect to={`${path}/all`} />
+            </Route>
             <Route path={`${path}/:cat`}>
               <ProductList
                 setFilteredItemLength={setFilteredItemLength}
@@ -42,7 +45,6 @@ const Products = ({ products }) => {
                 products={products}
                 minPrice={minPrice}
                 maxPrice={maxPrice}
-                a={'iki'}
               />
             </Route>
           </Switch>
@@ -62,6 +64,10 @@ const mapStateToProps = ({ productsReducer }) => {
     products: productsReducer.allProducts,
     selectedCat: productsReducer.selectedCat,
   };
+};
+
+Products.protoType = {
+  products: PropTypes.array.isRequired,
 };
 
 export default connect(mapStateToProps)(Products);

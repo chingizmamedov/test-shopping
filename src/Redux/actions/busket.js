@@ -8,9 +8,9 @@ const deleteProductFromBusket = (product) => ({
   product,
 });
 
-const getFromStock = (product) => ({
+const getFromStock = (products) => ({
   type: 'GET_FROM_STOK',
-  product,
+  products,
 });
 
 const receiveToStok = (product) => ({

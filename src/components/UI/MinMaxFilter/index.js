@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
 
 const MinMaxFilter = ({ maxPrice, minPrice, setMinPrice, setMaxPrice }) => {
@@ -36,6 +37,13 @@ const MinMaxFilter = ({ maxPrice, minPrice, setMinPrice, setMaxPrice }) => {
       </div>
     </div>
   );
+};
+
+MinMaxFilter.propTypes = {
+  maxPrice: PropTypes.number.isRequired,
+  minPrice: PropTypes.number.isRequired,
+  setMinPrice: PropTypes.func.isRequired,
+  setMaxPrice: PropTypes.func.isRequired,
 };
 
 export default MinMaxFilter;

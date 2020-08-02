@@ -1,8 +1,12 @@
 import _ from 'lodash';
 import products from '../../utils/constants';
+import getRandomInt from '../../utils/getRandomInit';
 
 const initialState = {
-  allProducts: products.map((item) => ({ ...item, stok: 4 })),
+  allProducts: products.map((item) => {
+    const rundomStokItem = getRandomInt(1, 20);
+    return { ...item, stok: rundomStokItem };
+  }),
   categoriesList: [
     'KİŞİ ÜST GEYİMİ',
     'KOSTYUMLAR VƏ PENCƏKLƏR',
@@ -64,11 +68,12 @@ export default function (state = initialState, action) {
     }
     case 'GET_FROM_STOK': {
       const oldAllProductsList = [...state.allProducts];
-      const index = _.findIndex(state.allProducts, { src: action.product.src });
-      if (oldAllProductsList[index].stok > 0) {
-        oldAllProductsList[index].stok = oldAllProductsList[index].stok - 1;
-      }
-
+      action.products.forEach((item) => {
+        const index = _.findIndex(state.allProducts, { src: item.src });
+        if (oldAllProductsList[index].stok > 0) {
+          oldAllProductsList[index].stok -= item.count;
+        }
+      });
       return {
         ...state,
         allProducts: oldAllProductsList,

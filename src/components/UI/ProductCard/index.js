@@ -4,6 +4,7 @@ import { store } from 'react-notifications-component';
 import { connect } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import { addProductToBusket } from '../../../Redux/actions';
 
 const ProductCard = ({
@@ -107,6 +108,16 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addProductToBusketDispatch: (product) => dispatch(addProductToBusket(product)),
   };
+};
+
+ProductCard.propTypes = {
+  src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  stok: PropTypes.number.isRequired,
+  addProductToBusketDispatch: PropTypes.func.isRequired,
+  allProducts: PropTypes.array.isRequired,
+  buyProducts: PropTypes.array.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);

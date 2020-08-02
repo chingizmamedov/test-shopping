@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import PropTypes from 'prop-types';
 import BusketItem from './BusketItem';
 import styles from './SidebarBusket.module.scss';
 
@@ -74,5 +75,10 @@ const SidebarBusket = ({ buyProduct, handleShowMiniList }) => {
 const mapStateToProps = ({ busketReducer }) => ({
   buyProduct: busketReducer.buyProducts,
 });
+
+SidebarBusket.propTypes = {
+  buyProduct: PropTypes.array.isRequired,
+  handleShowMiniList: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps)(SidebarBusket);

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { store } from 'react-notifications-component';
+import PropTypes from 'prop-types';
 import styles from './SidebarBusket.module.scss';
 import { addProductToBusket, deleteProductFromBusket } from '../../Redux/actions';
 
@@ -45,7 +46,9 @@ const BusketItem = ({
             <div className={`d-flex ${styles.counter}`}>
               <div
                 onClick={() => {
-                  deleteItem(item);
+                  if (count >= 0) {
+                    deleteItem(item);
+                  }
                 }}
               >
                 -
@@ -82,5 +85,16 @@ const mapDispatchToProps = (dispatch) => ({
   deleteItem: (item) => dispatch(deleteProductFromBusket(item)),
   addProductToBusketDispatch: (product) => dispatch(addProductToBusket(product)),
 });
+
+BusketItem.propTypes = {
+  src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
+  item: PropTypes.object.isRequired,
+  deleteItem: PropTypes.func.isRequired,
+  addProductToBusketDispatch: PropTypes.func.isRequired,
+  allProducts: PropTypes.array.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BusketItem);

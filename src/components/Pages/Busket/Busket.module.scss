@@ -1,10 +1,9 @@
 .busket {
   &_wrap {
-    height: 60vh;
+    height: 56vh;
     overflow: auto;
-    min-height: 738px;
+    min-height: 438px;
     width: 90%;
-    max-width: 470px;
   }
   &_item {
     border: 1px solid #343b3f;
@@ -23,4 +22,9 @@
 
 .all_info {
   font-size: 28px;
+}
+
+.additional {
+  width: 90%;
+  max-width: 420px;
 }

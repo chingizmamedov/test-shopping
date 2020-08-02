@@ -1,11 +1,12 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { NavLink, Link, useRouteMatch } from 'react-router-dom';
 import styles from './ProducType.module.scss';
 import { selectCat } from '../../Redux/actions';
 
-const ProductTypes = ({ categoriesList }) => {
+const ProductTypes = ({ categoriesList, handleSetPage }) => {
   const { url } = useRouteMatch();
   return (
     <Nav className={styles.type}>
@@ -14,7 +15,11 @@ const ProductTypes = ({ categoriesList }) => {
       </div>
       {categoriesList.map((item) => (
         <div key={item}>
-          <NavLink activeClassName={styles.active} to={`${url}/${item}`}>
+          <NavLink
+            onClick={() => handleSetPage(0)}
+            activeClassName={styles.active}
+            to={`${url}/${item}`}
+          >
             {item}
           </NavLink>
         </div>
@@ -33,6 +38,11 @@ const mapDispatchTOProps = (dispatch) => {
   return {
     selectCatDispatch: (cat) => dispatch(selectCat(cat)),
   };
+};
+
+ProductTypes.propTypes = {
+  categoriesList: PropTypes.array.isRequired,
+  handleSetPage: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchTOProps)(ProductTypes);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './MainLink.module.scss';
 
@@ -25,6 +26,13 @@ const MainLink = ({ img, name, to, col }) => {
       <div className={styles.link_name}>{name}</div>
     </div>
   );
+};
+
+MainLink.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  to: PropTypes.string,
+  col: PropTypes.string,
 };
 
 export default MainLink;

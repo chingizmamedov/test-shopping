@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Jumbotron } from 'react-bootstrap';
 import ProductCard from '../ProductCard';
 
-const ProductList = ({ products, page, setFilteredItemLength, minPrice, maxPrice, a }) => {
+const ProductList = ({ products, page, setFilteredItemLength, minPrice, maxPrice }) => {
   const { cat } = useParams();
   const [slicedItems, setSlicedItems] = useState([]);
   useEffect(() => {
@@ -66,6 +67,14 @@ const ProductList = ({ products, page, setFilteredItemLength, minPrice, maxPrice
       )}
     </>
   );
+};
+
+ProductList.propTypes = {
+  products: PropTypes.array.isRequired,
+  page: PropTypes.number.isRequired,
+  setFilteredItemLength: PropTypes.func.isRequired,
+  minPrice: PropTypes.number.isRequired,
+  maxPrice: PropTypes.number.isRequired,
 };
 
 export default ProductList;

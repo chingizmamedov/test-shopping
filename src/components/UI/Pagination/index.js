@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 
 const PaginationWrap = ({ productcount, handleSetpage, page }) => {
@@ -27,6 +28,12 @@ const PaginationWrap = ({ productcount, handleSetpage, page }) => {
       />
     </div>
   );
+};
+
+PaginationWrap.propTypes = {
+  productcount: PropTypes.number.isRequired,
+  handleSetpage: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
 };
 
 export default PaginationWrap;

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Badge, Navbar, Nav } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import { CSSTransition } from 'react-transition-group';
 import Logout from '../../images/logout.svg';
 import Store from '../../images/local_grocery_store_24px_rounded.svg';
 import styles from './Header.module.scss';
 import SidebarBusket from '../SidebarBusket';
-import { CSSTransition } from 'react-transition-group';
 
 const Header = ({ buyProduct }) => {
   const [cookie, , removeCookie] = useCookies(['token']);
@@ -83,5 +84,9 @@ const Header = ({ buyProduct }) => {
 const mapStateToProps = ({ busketReducer }) => ({
   buyProduct: busketReducer.buyProducts,
 });
+
+Header.propTypes = {
+  buyProduct: PropTypes.array,
+};
 
 export default connect(mapStateToProps)(Header);
