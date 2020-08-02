@@ -11,11 +11,12 @@ const MinMaxFilter = ({ maxPrice, minPrice, setMinPrice, setMaxPrice }) => {
           <Form.Control
             size="sm"
             type="number"
-            value={minPrice}
+            value={minPrice === 0 ? '' : minPrice}
             onChange={setMinPrice}
             style={{
               width: '80px',
             }}
+            placeholder="min"
             min={0}
           />
         </Form.Group>
@@ -29,8 +30,9 @@ const MinMaxFilter = ({ maxPrice, minPrice, setMinPrice, setMaxPrice }) => {
             style={{
               width: '80px',
             }}
-            value={maxPrice}
+            value={maxPrice === 0 ? '' : maxPrice}
             onChange={setMaxPrice}
+            placeholder="max"
             min={0}
           />
         </Form.Group>

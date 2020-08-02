@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import styles from './Busket.module.scss';
 import BusketBigItem from './BusketBigItem';
 import { getFromStock } from '../../../Redux/actions';
+import swal from 'sweetalert';
 
 const BusketPage = ({ buyProduct, getFromStok }) => {
   const [state, setState] = useState([]);
@@ -23,7 +24,7 @@ const BusketPage = ({ buyProduct, getFromStok }) => {
     <div className="p-5">
       <div className="d-flex w-100 p-5 mb-5">
         <div className="d-flex flex-column w-50 mr-5 pl-4 pr-4">
-          <h2>Selected products</h2>
+          <h2>Seçilən məhsullar</h2>
           <div className={`d-flex flex-column products-list ${styles.busket_wrap}`}>
             {buyProduct.length ? (
               buyProduct.map((item) => {
@@ -51,12 +52,22 @@ const BusketPage = ({ buyProduct, getFromStok }) => {
               <span>Cəm qiymət : {state[1]}</span>
             </div>
             <Button
-              onClick={() => getFromStok(buyProduct)}
+              onClick={() => {
+                getFromStok(buyProduct);
+                swal({
+                  text: 'Sorğu təsdiqləndi!',
+                  button: {
+                    text: 'Bağla',
+                  },
+                }).then(() => {
+                  window.location.href = '/man/all';
+                });
+              }}
               disabled={!buyProduct.length}
               className="w-75 mt-3"
               variant="success"
             >
-              Buy
+              Təsdiqlə
             </Button>
           </div>
           <div className={`d-flex flex-column ${styles.additional}`}>
@@ -64,10 +75,9 @@ const BusketPage = ({ buyProduct, getFromStok }) => {
               <Card>
                 <Card.Header as="h5">Əlavə</Card.Header>
                 <Card.Body>
-                  <Card.Title>Seçilən məhsullar aryrıca saxlanılır</Card.Title>
+                  <Card.Title>Seçilən məhsullar ayrıca saxlanılır</Card.Title>
                   <Card.Text>
-                    Məhsulları almaq düyməsini basanda Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Ipsam, repellendus!
+                    Məhsulları almaq düyməsini sıxdıqda stokda olan məhsulların sayı dəyişir.
                   </Card.Text>
                 </Card.Body>
               </Card>

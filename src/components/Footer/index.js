@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="d-flex">
         <div className="col-12 p-4 bg-dark">
           <div className="d-flex flex-column">
-            <span>All right reserved</span>
+            <span>All rights reserved</span>
             <span>Site create for test</span>
           </div>
         </div>

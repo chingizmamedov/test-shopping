@@ -18,7 +18,7 @@ const BusketItem = ({
 }) => {
   const addNotify = () => {
     store.addNotification({
-      message: 'no item on stok, sorry!...',
+      message: 'Məhsul sayı məhduddur!',
       type: 'info',
       insert: 'top',
       container: 'top-right',

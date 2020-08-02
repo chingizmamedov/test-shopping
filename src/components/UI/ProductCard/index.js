@@ -23,7 +23,7 @@ const ProductCard = ({
   )[0];
   const addNotifyCookie = () => {
     store.addNotification({
-      message: 'You need sign in to select item',
+      message: 'Seçmək üçün daxil olmalısız!',
       type: 'danger',
       insert: 'top',
       container: 'top-right',
@@ -37,7 +37,7 @@ const ProductCard = ({
   };
   const addNotify = () => {
     store.addNotification({
-      message: 'no item on stok, sorry!...',
+      message: 'Məhsul sayı məhduddur!....',
       type: 'info',
       insert: 'top',
       container: 'top-right',
@@ -70,7 +70,7 @@ const ProductCard = ({
           as="span"
           title={name}
         >
-          Giymət: {amount} AZN
+          Qiymət: {amount} AZN
         </Card.Text>
         <div className="d-flex flex-column-reverse">
           <Button

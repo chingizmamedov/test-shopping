@@ -35,7 +35,7 @@ const Header = ({ buyProduct }) => {
       <Navbar className="p-0 pl-3 pr-3" collapseOnSelect expand="lg" bg="light" variant="light">
         <Link to="/">
           <div className={styles.logo} href="#home">
-            ShopItto
+            ShopAz
           </div>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

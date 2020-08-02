@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { store } from 'react-notifications-component';
@@ -25,7 +25,7 @@ const BusketBigItem = ({
 }) => {
   const addNotify = () => {
     store.addNotification({
-      message: 'no item on stok, sorry!...',
+      message: 'Məhsul sayı məhduddur!',
       type: 'info',
       insert: 'top',
       container: 'top-right',
@@ -39,6 +39,9 @@ const BusketBigItem = ({
   };
   const index = _.findIndex(allProducts, { src });
   const { stok } = allProducts[index];
+  useEffect(() => {}, [count, stok]);
+  console.log('stok', stok);
+  console.log('count', count);
   return (
     <div
       className={`d-flex align-items-start position-relative mb-2 pl-2 pr-2 pt-4 pb-4 ${styles.item}`}
@@ -63,9 +66,8 @@ const BusketBigItem = ({
               <div
                 role="button"
                 onClick={() => {
-                  if (stok > 0) {
+                  if (stok > count) {
                     addProductToBusketDispatch(item);
-                    getFromStockDisPatch(item);
                   } else {
                     addNotify();
                   }

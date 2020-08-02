@@ -54,14 +54,11 @@ const ProductList = ({ products, page, setFilteredItemLength, minPrice, maxPrice
           className="todo-list row mt-3 ml-1 mr-1"
           style={{
             paddingLeft: '280px',
+            minHeight: '85vh',
           }}
         >
-          <Jumbotron>
-            <h1>Hello, world!</h1>
-            <p>
-              This is a simple hero unit, a simple jumbotron-style component for calling extra
-              attention to featured content or information.
-            </p>
+          <Jumbotron className="w-100 d-flex justify-content-center align-items-center">
+            <p>Qeyd etdiyiniz sorğu üzrə məhsul mövcud deyil.</p>
           </Jumbotron>
         </div>
       )}

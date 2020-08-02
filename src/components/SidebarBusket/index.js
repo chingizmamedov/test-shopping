@@ -62,7 +62,7 @@ const SidebarBusket = ({ buyProduct, handleShowMiniList }) => {
             </div>
             <div className="d-flex">
               <Link className="btn btn-success mt-4 w-100" to="/busket" variant="success">
-                Go Buy :)
+                Təsdiqlə
               </Link>
             </div>
           </div>
